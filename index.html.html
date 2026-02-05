@@ -165,87 +165,14 @@ body{
   </div>
 
   <!-- PAGE 2 -->
- 
-<div class="container">
-
-  <div class="top-text">
-    Sebelum mulai, kamu play dulu yaa lagunya!
-  </div>
-
-  <div class="album-wrapper">
-    <div class="vinyl" id="vinyl"></div>
-
-    <div class="album-cover">
-      <img src="cover.jpg" alt="album">
-      <div class="album-text">
-      </div>
+  <div class="page page2">
+    <div>
+      <h1>💖 I LOVE YOU 💖</h1>
+      <p>thank you for being part of my story</p>
     </div>
   </div>
-
-  <div class="player">
-    <div class="player-header">
-      <div class="play-btn" id="btn">▶</div>
-      <div class="track-info">
-        <strong>KOPET MIRIP MONYET</strong><br>
-        WKWKWK
-      </div>
-    </div>
-    <div class="progress">
-      <div class="progress-bar" id="progress"></div>
-    </div>
-  </div>
-
-  <div class="arrow" id="arrow">➜</div>
 
 </div>
-
-<!-- AUDIO -->
-<audio id="audio">
-  <source src="lagu.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-const audio = document.getElementById("audio");
-const btn = document.getElementById("btn");
-const progress = document.getElementById("progress");
-const vinyl = document.getElementById("vinyl");
-const arrow = document.getElementById("arrow");
-
-/* PLAY / PAUSE */
-btn.onclick = () => {
-  if(audio.paused){
-    audio.play();
-    btn.innerHTML = "❚❚";
-    vinyl.style.animationPlayState = "running";
-  } else {
-    audio.pause();
-    btn.innerHTML = "▶";
-    vinyl.style.animationPlayState = "paused";
-  }
-};
-
-/* AUTO PLAY VIA ARROW */
-arrow.onclick = () => {
-  audio.play();
-  btn.innerHTML = "❚❚";
-  vinyl.style.animationPlayState = "running";
-  arrow.style.display = "none";
-};
-
-/* PROGRESS */
-audio.addEventListener("timeupdate", () => {
-  const percent = (audio.currentTime / audio.duration) * 100;
-  progress.style.width = percent + "%";
-});
-
-/* RESET */
-audio.addEventListener("ended", () => {
-  btn.innerHTML = "▶";
-  vinyl.style.animationPlayState = "paused";
-  progress.style.width = "0%";
-  arrow.style.display = "flex";
-});
-</script>
 
 <script>
 /* pindah halaman */
